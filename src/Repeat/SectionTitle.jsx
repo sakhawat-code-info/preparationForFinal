@@ -1,6 +1,7 @@
 
 
 
+
 const SectionTitle = ({ subTitle, heading }) => {
     return (
         <div className="mx-auto w-4/12 text-center my-5">

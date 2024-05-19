@@ -1,8 +1,9 @@
 import './App.css'
 import Banner from './Components/Banner'
 import Category from './Components/Category'
-import SectionTitle from './Repeat/SectionTitle'
-
+import Featured from './Components/Featured'
+import Testimonials from './Components/Testimonials'
+import PopularMenu from './Repeat/PopularMenu'
 
 function App() {
 
@@ -13,12 +14,15 @@ function App() {
       <Banner></Banner>
 
 
-      <SectionTitle subTitle={'From 11:00am to 10:00pm'} heading={'ORDER ONLINE'}></SectionTitle>
+
       <Category></Category>
 
+      <PopularMenu></PopularMenu>
+
+      <Featured></Featured>
 
 
-
+      <Testimonials></Testimonials>
 
     </>
   )
