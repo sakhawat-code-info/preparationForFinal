@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import './App.css'
 import Banner from './Components/Banner'
 import Category from './Components/Category'
@@ -10,10 +11,12 @@ function App() {
   // https://www.tailwind-kit.com/images/landscape/8.svg
   return (
     <>
+      <Helmet>
+        <title>12 || Home</title>
+      </Helmet>
+
 
       <Banner></Banner>
-
-
 
       <Category></Category>
 
@@ -21,8 +24,11 @@ function App() {
 
       <Featured></Featured>
 
-
       <Testimonials></Testimonials>
+
+
+
+
 
     </>
   )
