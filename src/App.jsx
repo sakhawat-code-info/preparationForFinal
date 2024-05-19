@@ -1,4 +1,7 @@
 import './App.css'
+import Banner from './Components/Banner'
+import Category from './Components/Category'
+import SectionTitle from './Repeat/SectionTitle'
 
 
 function App() {
@@ -7,7 +10,11 @@ function App() {
   return (
     <>
 
-      app body
+      <Banner></Banner>
+
+
+      <SectionTitle subTitle={'From 11:00am to 10:00pm'} heading={'ORDER ONLINE'}></SectionTitle>
+      <Category></Category>
 
 
 
