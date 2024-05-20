@@ -2,7 +2,7 @@
 
 const FoodCard = ({ item }) => {
     // console.log(item)
-    const { name, recipe, image, category, price } = item;
+    const { name, recipe, image, price } = item;
 
 
     return (

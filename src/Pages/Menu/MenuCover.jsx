@@ -4,6 +4,9 @@
 
 
 const MenuCover = ({ coverImg, title, description }) => {
+
+
+
     return (
         <div>
             <div className="hero min-h-[598px]" style={{ backgroundImage: `url("${coverImg}")` }}>

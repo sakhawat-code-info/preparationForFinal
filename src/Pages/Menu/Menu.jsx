@@ -92,7 +92,7 @@ const Menu = () => {
 
 
 
-        </div>
+        </div >
     );
 };
 

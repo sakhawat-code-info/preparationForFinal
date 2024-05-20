@@ -5,6 +5,7 @@ import 'react-tabs/style/react-tabs.css';
 import { useState } from "react";
 import FoodCard from "../../Repeat/FoodCard";
 import useAllData from "../../useHooks/useAllData";
+import { useParams } from "react-router-dom";
 
 
 
@@ -14,23 +15,21 @@ import useAllData from "../../useHooks/useAllData";
 
 
 const OrderFood = () => {
-    const [tabIndex, setTabIndex] = useState(0);
-
     const data = useAllData();
+
+    const categories = ["salad", "pizza", "soup", "desserts", "drinks",]
+    const { category } = useParams();
+
+    const initialCategory = categories.indexOf(category)
+
+    const [tabIndex, setTabIndex] = useState(initialCategory);
+
 
     const salad = data.filter(item => item.category === "salad");
     const drinks = data.filter(item => item.category === "drinks");
     const dessert = data.filter(item => item.category === "dessert");
     const pizza = data.filter(item => item.category === "pizza");
     const soup = data.filter(item => item.category === "soup");
-
-
-
-
-
-
-
-
 
 
     return (
