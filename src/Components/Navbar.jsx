@@ -31,7 +31,7 @@ const Navbar = () => {
                     <li><Link >CONTACT us</Link></li>
                     <li><Link>DASHBOARD</Link></li>
                     <li><Link to={'/menu'}>Our Menu</Link></li>
-                    <li><Link to={'/orderFood'}>Order Food</Link></li>
+                    <li><Link to={'/orderFood/salad'}>Order Food</Link></li>
 
                 </ul>
             </div>

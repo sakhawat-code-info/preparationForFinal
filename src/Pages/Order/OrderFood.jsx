@@ -6,6 +6,7 @@ import { useState } from "react";
 import FoodCard from "../../Repeat/FoodCard";
 import useAllData from "../../useHooks/useAllData";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -34,6 +35,15 @@ const OrderFood = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>12 || Order food</title>
+
+            </Helmet>
+
+
+
+
+
             <MenuCover
                 coverImg={ourShopBgPhoto}
                 title="OUR SHOP"
