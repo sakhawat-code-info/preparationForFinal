@@ -28,10 +28,11 @@ const Navbar = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 uppercase">
                     <li><Link to={'/'}>Home</Link></li>
-                    <li><Link >CONTACT us</Link></li>
-                    <li><Link>DASHBOARD</Link></li>
+                    {/* <li><Link >CONTACT us</Link></li>
+                    <li><Link>DASHBOARD</Link></li> */}
                     <li><Link to={'/menu'}>Our Menu</Link></li>
                     <li><Link to={'/orderFood/salad'}>Order Food</Link></li>
+                    <li><Link to={'/login'}>Login</Link></li>
 
                 </ul>
             </div>
