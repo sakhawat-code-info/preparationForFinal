@@ -1,9 +1,33 @@
+import axios from "axios";
+import useAuthInfo from "../useHooks/useAuthInfo";
 
 
 const FoodCard = ({ item }) => {
-    // console.log(item)
-    const { name, recipe, image, price } = item;
 
+    const { user } = useAuthInfo();
+    // console.log(user)
+
+    const { name, recipe, image, price, _id } = item;
+
+    const handleOrderFoodItem = (foodOrdered) => {
+
+        if (user && user.email) {
+            console.log(foodOrdered);
+            const orderItemInfo = {
+                menuOrderId: _id,
+                orderedBy: user.email,
+                orderTime: new Date("2015-03-25"),
+                name,
+                image,
+                price
+            }
+
+            axios.post('http://localhost:5000/foodOrdered', orderItemInfo)
+                .then(res => console.log(res.data))
+        }
+
+
+    }
 
     return (
         <div>
@@ -14,7 +38,7 @@ const FoodCard = ({ item }) => {
                     <h2 className="card-title text-center">{name}</h2>
                     <p>{recipe.slice(0, 100)}</p>
                     <div className="card-actions justify-center">
-                        <button className="btn btn-outline border-0 border-b-2 capitalize">add to cart</button>
+                        <button onClick={() => handleOrderFoodItem(item)} className="btn btn-outline border-0 border-b-2 capitalize">add to cart</button>
                     </div>
                 </div>
             </div>
