@@ -17,10 +17,8 @@ const FoodCard = ({ item }) => {
                 menuOrderId: _id,
                 orderedBy: user.email,
                 orderTime: new Date("2015-03-25"),
-                name,
-                image,
-                price
             }
+            // this is a changed
 
             axios.post('http://localhost:5000/foodOrdered', orderItemInfo)
                 .then(res => console.log(res.data))
