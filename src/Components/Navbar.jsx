@@ -1,9 +1,12 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import useOrderedData from "../useHooks/useOrderedData";
 
 
 const Navbar = () => {
+
+    const [orderData] = useOrderedData();
 
     const { logOutUser, user } = useContext(AuthContext);
 
@@ -53,7 +56,7 @@ const Navbar = () => {
                             </svg>
                             <span className="absolute inset-0 object-right-top -mr-6">
                                 <div className="inline-flex items-center px-1.5 py-0.5 border-2 border-white rounded-full text-xs font-semibold leading-4 bg-red-500 text-white">
-                                    6
+                                    {orderData.length}
                                 </div>
                             </span>
                         </button>
